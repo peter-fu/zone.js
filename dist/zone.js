@@ -1193,7 +1193,7 @@
 	        var onproperty = 'on' + property;
 	        document.addEventListener(property, function (event) {
 	            var elt = event.target, bound, source;
-	            if (elt) {
+	            if (elt && elt.constructor) {
 	                source = elt.constructor['name'] + '.' + onproperty;
 	            }
 	            else {
